@@ -14,11 +14,13 @@ const characterRoutes = require('./src/api/characters/characters.routes');
 
 const server = express();
 const PORT = 3000;
-
+//le damos valor al body porque al hacer la peticion post sale undefined
+server.use(express.json());// duda ??????????????
+server.use(express.urlencoded({extended:false}));
 // le decimos que para todo prefijo que empiece por /characters quiero que lo busques en la ruta characterRoutes
 // y todo los que empiece por ruta normal me lo buscque en indexroute
 server.use('/',indexRoutes);
-server.use('/characters',characterRoutes)
+server.use('/characters',characterRoutes);
 
 
 server.listen(PORT , () =>{
