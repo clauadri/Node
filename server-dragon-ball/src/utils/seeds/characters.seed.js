@@ -4,7 +4,7 @@
 // si hay los borramos y luego meteremoslos nuevos datos por defecto y es mas que nada cuando se empieza un proyecto
 
 const { default: mongoose } = require("mongoose");
-const{ DB_URL } = require('../database/db');// porque .. ???
+const{ DB_URL } = require('../database/db');// .. es que subo una carpeta
 // importamos character de characters model
 const Character = require('../../api/characters/characters.model');
 
